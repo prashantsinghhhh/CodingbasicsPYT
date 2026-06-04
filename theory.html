@@ -16,14 +16,17 @@ In C/C++, the variable is the container.
 In C or C++, when you write int A = 5; , the compiler allocates a specific chunk of memory (usually 4 bytes), 
 labels that exact chunk A, and dumps the binary for 5 right into it.
 </p>
-<p><code>--- RAM MEMORY (C/C++) ---
+<pre><code>--- RAM MEMORY (C/C++) ---
        
        Address: #1002
        +-------------------------+
-    A  |        00000101         |  <- The number 5 is inside the box.
+    A  |        00000101         |  &lt;- The number 5 is inside the box.
        +-------------------------+
-         (Box size: exactly 4 bytes)
-        </code></p>
+         (Box size: exactly 4 bytes)</code></pre>
+
+# Less-than symbol < in  "<- The number 5..." to its HTML entity equivalent: &lt;. 
+#If you use a raw < symbol inside HTML, the browser might mistake it for an unclosed HTML tag and break your layout!
+
 <p><strong>Memory usage:</strong> You pay for one thing: the box holding the integer.</p>
 <p>If you change it (A = 10): The computer goes to address #1002, erases the 5, and writes 10 in its place. The box never moves.</p>
 
@@ -34,13 +37,14 @@ labels that exact chunk A, and dumps the binary for 5 right into it.
 
 <p><strong>Memory usage:</strong> You pay for two things: the object holding the integer and the variable holding the pointer.</p>
 <p>The Variable (The Pointer): A completely separate chunk of memory is allocated for A. This variable takes up 8 bytes (on a 64-bit computer) just to store the memory address number of where the 5 is located.</p>
-<p><code>--- RAM MEMORY (Python) ---
+<h3>Python Memory Representation (Pointer + Object)</h3>
+        <pre><code>--- RAM MEMORY (Python) ---
        
        Address: #5001                     Address: #9004
        +-------------------+              +------------------------------+
-    A  |       #9004       |------------> | [Integer Object: 5]          |
+    A  |       #9004       |------------&gt; | [Integer Object: 5]          |
        +-------------------+              +------------------------------+
-       (Pointer: 8 bytes)                 (Data Object: ~28 bytes)</code></p>
+       (Pointer: 8 bytes)                 (Data Object: ~28 bytes)</code></pre>
 
 <p><strong>Memory usage:</strong> You pay for two things: the pointer (A) and the object (5). This means Python actually uses significantly more memory than C/C++ for a simple variable.</p>
 
