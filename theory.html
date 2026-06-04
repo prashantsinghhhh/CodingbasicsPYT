@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Theory</title>
+</head>
+<body>
+
+<p><h3>Questions:</h3><br>
+so in c and c++ the variable also takes up memory and space but in python it doenst as it is acting as a pointer??</p>
+<br>
+<p><h3>Answer:</h3><br>
+In C/C++, the variable is the container.
+1. The C / C++ Way: The "Direct Box" Approach
+In C or C++, when you write int A = 5; , the compiler allocates a specific chunk of memory (usually 4 bytes), 
+labels that exact chunk A, and dumps the binary for 5 right into it.
+</p>
+<p><code>--- RAM MEMORY (C/C++) ---
+       
+       Address: #1002
+       +-------------------------+
+    A  |        00000101         |  <- The number 5 is inside the box.
+       +-------------------------+
+         (Box size: exactly 4 bytes)
+        </code></p>
+<p><strong>Memory usage:</strong> You pay for one thing: the box holding the integer.</p>
+<p>If you change it (A = 10): The computer goes to address #1002, erases the 5, and writes 10 in its place. The box never moves.</p>
+
+<p>2. The Python Way: The "Label + Object" Approach</p>
+<p>In Python, when you write A = 5, Python creates two separate things in memory:</p>
+
+<p>The Object (The Data): A chunk of memory is allocated to hold the integer 5. Because Python is a high-level language, this object isn't just a raw number—it also tracks things like the "data type" and a "reference counter." A standard Python integer actually takes up about 28 bytes of memory!</p>
+
+<p><strong>Memory usage:</strong> You pay for two things: the object holding the integer and the variable holding the pointer.</p>
+<p>The Variable (The Pointer): A completely separate chunk of memory is allocated for A. This variable takes up 8 bytes (on a 64-bit computer) just to store the memory address number of where the 5 is located.</p>
+<p><code>--- RAM MEMORY (Python) ---
+       
+       Address: #5001                     Address: #9004
+       +-------------------+              +------------------------------+
+    A  |       #9004       |------------> | [Integer Object: 5]          |
+       +-------------------+              +------------------------------+
+       (Pointer: 8 bytes)                 (Data Object: ~28 bytes)</code></p>
+
+<p><strong>Memory usage:</strong> You pay for two things: the pointer (A) and the object (5). This means Python actually uses significantly more memory than C/C++ for a simple variable.</p>
+
+<p><strong>Changing the value:</strong> If you change it (A = 10): Python creates a brand new integer object 10 somewhere else in RAM, and updates the value inside A to look at the new address.</p>
+
+<p> In Python, the variable is a container that holds an address, which points to another container holding the data.
+
+So Python variables definitely take up space, they just spend their space storing a map coordinate rather than the raw data!</p>
+
+
+</body>
+</html>
