@@ -1,0 +1,18 @@
+import math
+
+# CALCULATING CIRCUMFERENCE OF CIRCLE - 2 * pi * r
+
+rad1= float(input("What is the radius "))
+print(f"The area of circle is {round(2* math.pi *rad1,2)}")
+
+# CALCULATING AREA OF A CIRCLE - PI * R * R
+
+rad2 = float(input("What is the radius of circle: "))
+print(f" The area of circle is {round(math.pi * math.pow(rad2,2), 2)}")
+
+# HYPOTHUNES OF SQAURE C= under root a^2 + b^2
+
+a= float(input("Value of a: "))
+b= float(input("Value of b: "))
+
+print(f"The value of C is: {round(math.sqrt((math.pow(a,2)+(math.pow(b,2)))),2)}")

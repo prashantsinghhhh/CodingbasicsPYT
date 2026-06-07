@@ -1,0 +1,34 @@
+
+# making a voting machine 
+# AGE SHOULD BE MORE THAN 18 
+
+# age = int(input("What is your age? "))
+
+# if age >= 18 and age <100:
+#     party = input("Which party do you want to vote? ")
+#     print(f"You have voted for {party}")
+# elif age < 0:
+#     print("invalid data")
+# elif age >= 100:
+#     print("Thats a great age to vote ")
+# else:
+#     print("Not eligible")
+
+## FOOD INVENTORY
+
+# response = input("Would you like to eat something? Y/N: ")
+
+# if response ==  "Y":
+#     food = input("What would you like to have? ")
+#     print(f"{food} will be prepaired by 10 min. Thankyou")
+# else:
+#     print("Thankyou")
+
+## BOOLEAN VALUE WITH IF ELSE
+
+online = False
+if online:
+    print("The user is online")
+else:
+    print("The user is offline")
+

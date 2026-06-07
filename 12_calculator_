@@ -1,0 +1,50 @@
+# import math
+
+# print("Welcome to the calculator: ")
+# print()
+# num1 = float(input("Enter num1: "))
+# operator = input("Enter the operation: ")
+# num2 = float(input("Enter num2: "))
+
+# if operator == "+":
+#     print(num1+num2)
+# elif operator == "-":
+#     print(num1-num2)
+# elif operator == "*":
+#     print(num1*num2)
+# elif operator == "/":
+#     print(num1/num2)
+# elif operator == "%":
+#     print(num1%num2)
+# else:
+#     print("Invalid")
+
+
+# weight conversion to KG and Pound
+
+# weight= float(input("ENTER YOUR WEIGHT "))
+# unit = input("KG/POUND ")
+
+# if unit == "KG":
+    
+#     unit = "LBS"
+#     print(f"Weight in pound is { weight * 2.205} {unit}")
+# elif unit == "POUND":
+    
+#     unit = "KG"
+#     print(f"Weight is KG is {weight/ 2.205} {unit}")
+# else:
+#     print("invalid unit")
+
+
+#LOGICAL OPERATOR - OR, AND , NOT
+
+temp = 25
+is_raining = False
+
+if temp > 35 or temp < 0 or not is_raining:
+    print("not playing outside")
+elif temp == 25:
+    print("lets play")
+else:
+    print("invalid")
