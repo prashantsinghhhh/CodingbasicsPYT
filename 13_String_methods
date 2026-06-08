@@ -1,0 +1,54 @@
+
+# STRING OPERATIONS 
+
+# 1. LENGTH OF STRING
+#      len()---------------------- NOTE- length is a gloabl operation and just linked with string and therefore 
+#                                        takes in arguments
+
+name = input("What is your name? ")
+length = len(name)
+print(length)
+
+
+# 2. Finding the index/Place of the alphabet in the string
+#            string.find()     --- string = what ever the variable name of string is -----
+
+# NOTE- in .find in python if it doesnt find anything in the string then it returns -1 
+# NOTE - IT RETURNS -1 BECASUE IN .find() 0 REPRESENTS THE VALUE OF 1ST INDEX
+#        SO TO NOT CONFUSE WITH THAT, IT RETURNS -1 
+
+
+#            string.rfind()    ---- Last occurance 
+
+find1= input("Enter which aplhabet to find? ")
+
+print(name.find(find1))
+print(name.rfind(find1))
+
+# 3. CAPITALIZATION: 
+#                           string.capitalize() 
+#                  UPPER CASE- string.upper()
+#                  LOWER CASE - string.lower()
+# IF STRING CONATINS ONLY NUMBER - string.isdigit()
+# IF STRING CONATINS ONLY ALPHABET - string.isalpha()
+
+print(name.capitalize())
+print(name.upper())
+print(name.lower())
+print(name.isdigit())
+print(name.isalpha())
+
+
+#4. Couting the number of times a value is repated -- string.count()
+
+count1 = input("Which letter/alphabet you want to count? ")
+print(count1)
+print(name.count(count1))
+
+#5. REPLACING A STRING VALUE-                         string.replace("x","y")   {replace "x" by "y"}
+replace1= input("Which letter you want to replace? ")
+print(name.replace(replace1,count1))
+
+# NOTE  - USE print(help(str)) ------- to find more usefull methods of string
+
+print(help(str))
